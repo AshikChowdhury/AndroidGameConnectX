@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="360dp"
         android:layout_centerVertical="true"
@@ -122,16 +123,18 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@color/colorAccent"
-        android:alpha="0"
+        android:background="@color/colorPrimary"
+        android:visibility="invisible"
+        android:padding="30dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/winnerMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="New Text"
+            android:text="Game Over!"
+            android:textColor="#fff"
             android:textSize="30sp" />
 
         <Button
@@ -139,6 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:onClick="playAgain"
             android:text="Play Again" />
     </LinearLayout>
